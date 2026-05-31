@@ -1,0 +1,53 @@
+baseURL = 'https://adrian009.github.io/doctor-office/'
+locale = 'en-us'
+title = 'Avancris - Întelegem Mintea, Susținem Omul'
+theme = 'hugo-profile'
+
+[params]
+	logo = "logo.png"
+	enableReadingTime = false
+	socialShare = false
+
+[params.theme]
+	defaultTheme = "dark"
+	disableThemeToggle = false
+	showDate = false
+	readingTime = false
+[params.singlePages.readTime]
+	enable = false
+[params.navbar]
+	disableSearch = true
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "Despre"
+    url = "/about/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "services"
+    name = "Servicii"
+    url = "/services/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "prices"
+    name = "Prețuri"
+    url = "/prices/"
+    weight = 30
+
+  [[menu.main]]
+    parent = "prices"
+    name = "Psihiatrie"
+    url = "/prices/psychiatry/"
+    weight = 1
+
+  [[menu.main]]
+    parent = "prices"
+    name = "Psihologie"
+    url = "/prices/psychology/"
+    weight = 2
+
+[markup.goldmark.renderer]
+  unsafe = true
