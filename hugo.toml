@@ -1,53 +1,452 @@
-baseURL = 'https://adrian009.github.io/doctor-office/'
-locale = 'en-us'
+baseURL = 'http://localhost:1313/doctor-office/'
+languageCode = 'en-us'
 title = 'Avancris - Întelegem Mintea, Susținem Omul'
 theme = 'hugo-profile'
 
 [params]
-	logo = "logo.png"
-	enableReadingTime = false
-	socialShare = false
+  title = "Avancris"
+  description = "Avancris - Întelegem Mintea, Susținem Omul"
+  # staticPath = ""  # The path to serve the static files from
+  favicon = "/doctor-office/fav.png"
 
-[params.theme]
-	defaultTheme = "dark"
-	disableThemeToggle = false
-	showDate = false
-	readingTime = false
-[params.singlePages.readTime]
-	enable = false
-[params.navbar]
-	disableSearch = true
+  # Whether the fade animations on the home page will be enabled
+  animate = true
 
-[menu]
-  [[menu.main]]
-    identifier = "about"
-    name = "Despre"
-    url = "/about/"
-    weight = 10
+  [params.theme]
+    # disableThemeToggle = true
+    # defaultTheme = "light" # dark
 
-  [[menu.main]]
-    identifier = "services"
-    name = "Servicii"
-    url = "/services/"
-    weight = 20
+  [params.font]
+    fontSize = "1rem" # default: 1rem
+    fontWeight = 400 # default: 400
+    lineHeight = 1.5 # default: 1.5
+    textAlign = "left" # default: left
 
-  [[menu.main]]
-    identifier = "prices"
-    name = "Prețuri"
-    url = "/prices/"
-    weight = 30
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  # [params.color]
+  #   textColor = "#343a40"
+  #   secondaryTextColor = "#6c757d"
+  #   textLinkColor = "#007bff"
+  #   backgroundColor = "#eaedf0"
+  #   secondaryBackgroundColor = "#64ffda1a"
+  #   primaryColor = "#007bff"
+  #   secondaryColor = "#f8f9fa"
 
-  [[menu.main]]
-    parent = "prices"
-    name = "Psihiatrie"
-    url = "/prices/psychiatry/"
-    weight = 1
+  #   [params.color.darkmode]
+  #     textColor = "#e4e6eb"
+  #     secondaryTextColor = "#b0b3b8"
+  #     textLinkColor = "#ffffff"
+  #     backgroundColor = "#18191a"
+  #     secondaryBackgroundColor = "#212529"
+  #     primaryColor = "#ffffff"
+  #     secondaryColor = "#212529"
 
-  [[menu.main]]
-    parent = "prices"
-    name = "Psihologie"
-    url = "/prices/psychology/"
-    weight = 2
+  # If you want to customize the menu, you can change it here
+  [params.navbar]
+    align = "ms-auto" # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    brandLogo = "/doctor-office/avancrisLogo.png" # Logo for the brand | default is the favicon variable
+    showBrandLogo = true # Show brand logo in nav bar | default is true
+    brandName = "Avancris" # Brand name for the brand | default is the title variable
+    disableSearch = true
+    # searchPlaceholder = "Search"
+    enableSeparator = false
 
-[markup.goldmark.renderer]
-  unsafe = true
+    [params.navbar.stickyNavBar]
+      enable = true
+      showOnScrollUp = true
+
+    [params.navbar.menus]
+      disableAbout = false
+      disableExperience = false
+      disableEducation = false
+      disableProjects = false
+      disableAchievements = false
+      disableContact = false
+
+  # Hero
+  [params.hero]
+    enable = true
+    intro = "Bine ati venit la"
+    title = "AVANCRIS"
+    subtitle = "Empatie - Echilibru - Evoluție"
+    content = "La S.C. AVANCRIS S.R.L. oferim servicii medicale specializate dedicate evaluării pacienților, diagnosticării acestora și tratamentului tulburărilor psihice, într-un cadru sigur, discret și empatic.\n\n Echipa noastră, formată din medic, psiholog, asistent medical, oferă o abordare integrată a sănătății mintale, cu accent pe respect și echilibrarea psihică a pacientului."
+    image = "/doctor-office/logo.jpeg"
+
+    [params.hero.bottomImage]
+      enable = true
+      roundImage = false # Make hero image circular | default false
+
+    [params.hero.button]
+      enable = false
+      name = "Resume"
+      url = "#"
+      download = true
+      newPage = false
+
+  # About
+  [params.about]
+    enable = true
+    title = "Dr. Băncescu Răzvan-Alexandru - Parcurs de excepție"
+    image = "/doctor-office/hero.jpeg"
+    content = """
+La începutul anilor ‘90, în cadrul Colegiul Național I.C. Brătianu Pitești, continuat cu Universitatea de Medicină și Farmacie ”Tg. Mureș” și ulterior rezidențiatul efectuat într-un cadru totalmente profesionist la Spitalul Clinic de Urgență Militar Central ,,Carol Davila’’ –  Bucuresti, sub îndrumarea Conf. univ. dr. col. Vasiliu Octavian.
+
+
+Continuă ulterior cu o experiență de peste 16 ani în Spitalul Județean de Urgență Pitești, Sectia Psihiatrie (în perioada martie 2024 - decembrie 2025 Medic Șef  Secție), în paralel în perioada 2015-2026 membru al Comisiei Medico-Legale Psihiatrice în cadrul Serviciului de Medicină Legală Argeș.
+"""
+    [params.about.skills]
+      enable = true
+      title = "Servicii oferite:"
+      items = [
+        "Consultații(inclusiv la domiciliu) cu diagnosticare",
+        "Eliberare de rețete simple/compensate, scrisori medicale, scheme de tratament, bilete de trimitere",
+        "Evaluări psihiatrice complexe",
+        "Eliberare de referate medicale(necesare la CECM, DGASPC – Handicap)",
+        "Completare program recuperator",
+        "Eliberare de adeverințe medicale",
+        "Eliberare raport de evaluare psihiatrică pentru instanța(tutela)"
+      ]
+
+  # Second About Section (Custom Added)
+  [params.about2]
+    enable = true
+    title = "Psiholog - Lungan Cristina Elena"
+    image = "/doctor-office/logo.jpeg"
+    content = """
+Cu o experiență de peste 10 ani în domeniul psihologiei și psiho-pedagogiei, oferă suport specializat în evaluarea și consilierea pacienților, contribuind la menținerea și îmbunătățirea echilibrului emoțional.
+
+"""
+    [params.about2.skills]
+      enable = true
+      title = "Servicii oferite:"
+      items = [
+        "Testări clinice(PANSS, YMRS, HAM-D, HAM-A, MMSE, TEST CEAS, GAFS, etc.) cu rapoarte de evaluare psihologică",
+        "Consiliere psihologică",
+        "Terapii (de suport imediat, cognitiv-comportamentală, psihodinamică/psihanalitică, centrată pe persoană, de cuplu și familie, prin expunere)",
+        "Eliberare avize psihologice (psihologie clinică, psihologia muncii, psihologia transporturilor)",
+        "Eliberare raport de evaluare psihologică pentru instanță (tutelă)"
+      ]
+
+
+  # Third About Section (Custom Added)
+  [params.about3]
+    enable = true
+    title = "Asistent medical - Catrina Denisa Maria"
+    image = "/doctor-office/logo.jpeg"
+    content = """
+Cu  experiență în domeniul psihiatriei de ambulatoriu și al îngrijirii medico-psihiatrice, asigură suport medical și contribuie la monitorizarea și îngrijirea pacienților.
+"""
+    [params.about3.skills]
+      enable = false
+      title = "Competențe:"
+      items = [
+        "Specialitate 1",
+        "Specialitate 2"
+      ]
+
+
+  # Experience
+  [params.experience]
+    enable = true
+    # title = "Custom Name"
+
+    [[params.experience.items]]
+      company = "Facebook"
+      companyUrl = "https://example.com"
+
+      [[params.experience.items.jobs]]
+        name = "Senior Software Developer"
+        date = "Jan 2023 - present"
+        content = "I am currently working as a senior software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+
+        [params.experience.items.jobs.info]
+          content = "Working as a senior software developer"
+
+        [[params.experience.items.jobs.featuredItems.fontAwesomeIcons]]
+          icon = "fa-brands fa-react"
+          url = "https://react.dev/"
+          tooltip = "Example tooltip content"
+
+        [[params.experience.items.jobs.featuredItems.fontAwesomeIcons]]
+          icon = "fab fa-x-twitter"
+          url = "https://example.com"
+          # tooltip = "Example tooltip content"
+
+        [[params.experience.items.jobs.featuredItems.customIcons]]
+          icon = "/fav.png"
+          url = "https://example.com"
+          tooltip = "Example tooltip content"
+
+      [[params.experience.items.jobs]]
+        name = "Software Developer"
+        date = "Jan 2022 - Dec 2023"
+        content = "I worked as a software developer. I worked on a project that will be used to help people find the best way to get around the city."
+
+    [[params.experience.items]]
+      company = "Amazon"
+      companyUrl = "https://example.com"
+
+      [[params.experience.items.jobs]]
+        name = "Software Developer"
+        date = "Sep 2020 - Dec 2021"
+        content = """
+I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+- Lead backend developer for a product.
+- Created a frontend design for a product.
+"""
+
+        [params.experience.items.jobs.info]
+          content = "I worked as a software developer for more than one year in Amazon."
+
+    [[params.experience.items]]
+      company = "Apple"
+      companyUrl = "https://example.com"
+
+      [[params.experience.items.jobs]]
+        name = "Junior Software Developer"
+        date = "Jan 2020 - Aug 2020"
+        content = """
+I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+- Lead backend developer for a product.
+- Created a frontend design for a product.
+"""
+
+        [[params.experience.items.jobs.featuredItems.fontAwesomeIcons]]
+          icon = "fa-brands fa-react"
+          url = "https://react.dev/"
+
+        [[params.experience.items.jobs.featuredItems.fontAwesomeIcons]]
+          icon = "fab fa-x-twitter"
+          url = "https://example.com"
+
+        [[params.experience.items.jobs.featuredItems.customIcons]]
+          icon = "/fav.png"
+          url = "https://example.com"
+
+    [[params.experience.items]]
+      company = "Netflix"
+      companyUrl = "https://example.com"
+
+      [[params.experience.items.jobs]]
+        name = "UI/UX Designer"
+        date = "June 2017 - Nov 2019"
+        content = """
+I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+- Lead backend developer for a product.
+- Created a frontend design for a product.
+"""
+
+    [[params.experience.items]]
+      company = "Google"
+      companyUrl = "https://example.com"
+
+      [[params.experience.items.jobs]]
+        name = "Product Designer"
+        date = "Feb 2016 - Mar 2017"
+        content = "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+
+  # Education
+  [params.education]
+    enable = true
+    title = "Prețuri"
+    index = false
+
+    [[params.education.items]]
+      title = "Master of Business Administration"
+      date = "2013 - 2015"
+      GPA = "3.8 out of 5.0"
+      content = """
+Extracurricular Activities
+  - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique."""
+
+      [params.education.items.school]
+        name = "University of California, Berkeley"
+        url = "https://example.org"
+
+    [[params.education.items]]
+      title = "Bachelor of Science in Computer Science"
+      date = "2009 - 2013"
+      GPA = "3.9 out of 5.0"
+      content = """
+I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
+  - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+  - Face mask detection using a single convolutional neural network.
+
+Extracurricular Activities
+  - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique."""
+
+      [params.education.items.school]
+        name = "Massachusetts Institute of Technology"
+        url = "https://example.org"
+
+      [params.education.items.featuredLink]
+        enable = true
+        name = "My academic record"
+        url = "https://example.com"
+
+    [[params.education.items]]
+      title = "High School"
+      GPA = "4.2 out of 5.0"
+
+      [params.education.items.school]
+        name = "Thomas Jefferson High School for Science and Technology."
+        url = "https://example.org"
+
+      [params.education.items.featuredLink]
+        enable = true
+        url = "https://example.com"
+
+  # Achievements
+  [params.achievements]
+    enable = true
+    # title = "Custom Name"
+
+    [[params.achievements.items]]
+      title = "Google kickstart runner"
+      content = "I solved all problems with optimal solution."
+      url = "https://example.com"
+      image = "/images/achievement.jpg"
+
+    [[params.achievements.items]]
+      title = "Facebook Hackathon Winner"
+      content = "Developed a product using Artificial Intelligence."
+      image = "/images/achievement.jpg"
+
+    [[params.achievements.items]]
+      title = "Hugo Profile"
+      content = "Developed a theme and getting 1K+ downloads per month."
+      url = "https://github.com/gurusabarish/hugo-profile"
+      image = "/images/achievement.jpg"
+
+    [[params.achievements.items]]
+      title = "Microsoft Imagine Runner"
+      content = "We are developed a product which can help others."
+
+    [[params.achievements.items]]
+      title = "Google Summer of Code"
+      content = "Contributed to a open source project."
+      url = "https://example.com"
+
+  # projects
+  [params.projects]
+    enable = true
+    # title = "Custom Name"
+
+    [[params.projects.items]]
+      title = "Hugo Profile"
+      content = "A highly customizable and mobile first Hugo template for personal portfolio and blog."
+      image = "/images/projects/profile.png"
+      badges = ["Hugo", "Bootstrap", "Javascript"]
+
+      [params.projects.items.featured]
+        name = "Demo"
+        link = "https://hugo-profile.netlify.app"
+
+      [[params.projects.items.links]]
+        icon = "fa fa-envelope"
+        url = "mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f"
+
+      [[params.projects.items.links]]
+        icon = "fab fa-github"
+        url = "https://github.com/gurusabarish/hugo-profile"
+
+      [[params.projects.items.links]]
+        icon = "fab fa-twitter"
+        url = "https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile"
+
+    [[params.projects.items]]
+      title = "Image Converter"
+      content = "A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django."
+      image = "/images/projects/converter.jpg"
+      badges = ["Django", "Bootstrap"]
+
+      [params.projects.items.featured]
+        name = "Demo"
+        link = "https://django-converter.herokuapp.com"
+
+      [[params.projects.items.links]]
+        icon = "fab fa-github"
+        url = "https://github.com/gurusabarish/converter"
+
+    [[params.projects.items]]
+      title = "Hugo Profile V2"
+      content = "A clean and simple Hugo template for personal portfolio and blog."
+      image = "/images/projects/profile2.jpg"
+      badges = ["Hugo", "Bootstrap", "Javascript"]
+
+      [params.projects.items.featured]
+        name = "Demo V2"
+        link = "https://hugo-profile-2.netlify.app"
+
+      [[params.projects.items.links]]
+        icon = "fab fa-github"
+        url = "https://github.com/gurusabarish/HugoProfileV2"
+
+  #Contact
+  [params.contact]
+    enable = true
+    # title = "Custom Name"
+    content = "My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!"
+    btnName = "Mail me"
+    btnLink = "mailto:gurusabarisha@gmail.com"
+    # [params.contact.formspree]
+    #   enable = true # `contact.email` value will be ignored
+    #   formId = "abcdefgh" # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption = "Enter your email address"
+    #   messageCaption = "Enter your message here"
+    #   messageRows = 5
+
+  [params.footer]
+    [params.footer.recentPosts]
+      path = "blogs"
+      count = 3
+      title = "Recent Posts"
+      enable = true
+      disableFeaturedImage = false
+
+    [params.footer.socialNetworks]
+      github = "https://github.com"
+      linkedin = "https://linkedin.com"
+      twitter = "https://twitter.com"
+      instagram = "https://instagram.com"
+      facebook = "https://facebook.com"
+
+  # List pages like blogs and posts
+  [params.listPages]
+    disableFeaturedImage = false
+
+  # Single pages like blog and post
+  [params.singlePages]
+    socialShare = true
+
+    [params.singlePages.readTime]
+      enable = true
+      content = "min read"
+
+    [params.singlePages.scrollprogress]
+      enable = true
+
+    [params.singlePages.tags]
+      openInNewTab = true
+
+  # For translations
+  [params.terms]
+    read = "Read"
+    toc = "Table Of Contents"
+    copyright = "All rights reserved"
+    emailText = "Check out this site"
+
+  [params.datesFormat]
+    article = "Jan 2, 2006"
+    articleList = "Jan 2, 2006"
+    articleRecent = "Jan 2, 2006"
+
+  #customScripts = """ # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
+  #"""
