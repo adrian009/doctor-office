@@ -13,9 +13,11 @@
             {{ end }}
             <div class="col-sm-12 col-md-12 col-lg-8 content">
                 {{ $about2.content | markdownify }}
-
+                <br>
                 {{ if .Site.Params.about2.skills.enable }}
                 {{ $about2.skills.title | default .Site.Params.about2.skills.title }}
+                <br>
+                <br>
                 <ul>
                     {{ range .Site.Params.about2.skills.items }}
                     <li>{{ . | markdownify }}</li>

@@ -70,7 +70,7 @@ theme = 'hugo-profile'
     intro = "Bine ati venit la"
     title = "AVANCRIS"
     subtitle = "Empatie - Echilibru - Evoluție"
-    content = "La S.C. AVANCRIS S.R.L. oferim servicii medicale specializate dedicate evaluării pacienților, diagnosticării acestora și tratamentului tulburărilor psihice, într-un cadru sigur, discret și empatic.\n\n Echipa noastră, formată din medic, psiholog, asistent medical, oferă o abordare integrată a sănătății mintale, cu accent pe respect și echilibrarea psihică a pacientului."
+    content = "La S.C. AVANCRIS S.R.L. oferim servicii medicale specializate dedicate evaluării pacienților, diagnosticării acestora și tratamentului tulburărilor psihice, într-un cadru sigur, discret și empatic."
     image = "/doctor-office/logo.jpeg"
 
     [params.hero.bottomImage]
@@ -84,8 +84,24 @@ theme = 'hugo-profile'
       download = true
       newPage = false
 
-  # About
+
+# About
   [params.about]
+    enable = true
+    title = "Echipa noastră"
+    image = "/doctor-office/avancris-team.png"
+    content = """
+Echipa noastră, formată din medic, psiholog, asistent medical, oferă o abordare integrată a sănătății mintale, cu accent pe respect și echilibrarea psihică a pacientului.
+"""
+    [params.about.skills]
+      enable = false
+      title = "Servicii oferite:"
+      items = [
+        
+      ]
+
+  # About
+  [params.about2]
     enable = true
     title = "Dr. Băncescu Răzvan-Alexandru - Parcurs de excepție"
     image = "/doctor-office/hero.jpeg"
@@ -95,11 +111,11 @@ La începutul anilor ‘90, în cadrul Colegiul Național I.C. Brătianu Piteșt
 
 Continuă ulterior cu o experiență de peste 16 ani în Spitalul Județean de Urgență Pitești, Sectia Psihiatrie (în perioada martie 2024 - decembrie 2025 Medic Șef  Secție), în paralel în perioada 2015-2026 membru al Comisiei Medico-Legale Psihiatrice în cadrul Serviciului de Medicină Legală Argeș.
 """
-    [params.about.skills]
+    [params.about2.skills]
       enable = true
       title = "Servicii oferite:"
       items = [
-        "Consultații(inclusiv la domiciliu) cu diagnosticare",
+        "Consultații (inclusiv la domiciliu) cu diagnosticare",
         "Eliberare de rețete simple/compensate, scrisori medicale, scheme de tratament, bilete de trimitere",
         "Evaluări psihiatrice complexe",
         "Eliberare de referate medicale(necesare la CECM, DGASPC – Handicap)",
@@ -109,15 +125,14 @@ Continuă ulterior cu o experiență de peste 16 ani în Spitalul Județean de U
       ]
 
   # Second About Section (Custom Added)
-  [params.about2]
+  [params.about3]
     enable = true
     title = "Psiholog - Lungan Cristina Elena"
     image = "/doctor-office/logo.jpeg"
     content = """
 Cu o experiență de peste 10 ani în domeniul psihologiei și psiho-pedagogiei, oferă suport specializat în evaluarea și consilierea pacienților, contribuind la menținerea și îmbunătățirea echilibrului emoțional.
-
 """
-    [params.about2.skills]
+    [params.about3.skills]
       enable = true
       title = "Servicii oferite:"
       items = [
@@ -130,14 +145,14 @@ Cu o experiență de peste 10 ani în domeniul psihologiei și psiho-pedagogiei,
 
 
   # Third About Section (Custom Added)
-  [params.about3]
+  [params.about4]
     enable = true
     title = "Asistent medical - Catrina Denisa Maria"
     image = "/doctor-office/logo.jpeg"
     content = """
 Cu  experiență în domeniul psihiatriei de ambulatoriu și al îngrijirii medico-psihiatrice, asigură suport medical și contribuie la monitorizarea și îngrijirea pacienților.
 """
-    [params.about3.skills]
+    [params.about4.skills]
       enable = false
       title = "Competențe:"
       items = [
@@ -148,7 +163,7 @@ Cu  experiență în domeniul psihiatriei de ambulatoriu și al îngrijirii medi
 
   # Experience
   [params.experience]
-    enable = true
+    enable = false
     # title = "Custom Name"
 
     [[params.experience.items]]
@@ -256,55 +271,59 @@ I am currently working as a software developer at [example org.](https://example
     index = false
 
     [[params.education.items]]
-      title = "Master of Business Administration"
-      date = "2013 - 2015"
-      GPA = "3.8 out of 5.0"
+      title = "Listă prețuri psihiatrie"
+      #date = "2013 - 2015"
+      #GPA = "3.8 out of 5.0"
       content = """
-Extracurricular Activities
-  - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique."""
 
-      [params.education.items.school]
-        name = "University of California, Berkeley"
-        url = "https://example.org"
+| Serviciu | Preț |
+| :--- | ---: |
+| Consultație pacient nou/neprogramată/în regim de urgență | **350 lei** |
+| Consultație control | **250 lei** |
+| Consultație cu B.T. | **–** |
+| Eliberare referat medical pentru CECM cu completare program recuperator (pacienți dispensarizați) | **250 lei** |
+| Eliberare referat medical pentru Comisia de Handicap – DGASPC (pacienți dispensarizați) | **250 lei** |
+| Eliberare referate medicale (CECM, Handicap) pentru pacienții nedispensarizați | **300 lei** |
+| Eliberare adeverințe medicale | **150 lei** |
+| Examinare pentru certificat prenupțial (2 pers.) | **200 lei** |
+| Eliberare copie după fișa de dispensarizare | **150 lei** |
+| Consultație la domiciliu (programare prealabilă, max. 5 km. de Pitești) | **500 lei** |
+| Consultație la domiciliu (programare prealabilă, max. 25 km. de Pitești) | **750 lei** |
+| Raport de evaluare psihiatrică pentru instanță (tutelă) | **1.000 lei** |
+| Raport de evaluare psihiatrică pentru instanță (tutelă) la domiciliu | **1.300 lei** |
+  """
+
 
     [[params.education.items]]
-      title = "Bachelor of Science in Computer Science"
-      date = "2009 - 2013"
-      GPA = "3.9 out of 5.0"
+      title = "Listă prețuri psihologie"
       content = """
-I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-  - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-  - Face mask detection using a single convolutional neural network.
 
-Extracurricular Activities
-  - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique."""
+| Serviciu | Preț |
+| :--- | ---: |
+| Rapoarte de evaluare psihologică cu testări pentru CECM, DGASPC (Handicap) | **200 lei** |
+| Consiliere psihologică (45 - 50 min.) | **200 lei** |
+| Consiliere psihologică suportivă, în regim de urgență (30 min.) | **150 lei** |
+| Psihoterapii (50 - 60 min.) | **300 lei/ședință** |
+| Eliberare avize pentru psihologie clinică, psihologia muncii, psihologia transporturilor | **150 lei** |
+| Eliberare avize pentru psihologie aplicată în domeniul securității naționale, permis port-armă | **200 lei** |
+| Examinare psihologică (testări, consiliere psihologică, psihoterapie de scurtă durată) la domiciliu (programare prealabilă, max. 5 km. de Pitești) | **350 lei** |
+| Examinare psihologică (testări, consiliere psihologică, psihoterapie de scurtă durată) la domiciliu (programare prealabilă, max. 25 km. de Pitești) | **500 lei** |
+| Raport de evaluare psihologică pentru instanță (tutelă) | **600 lei** |
+| Raport de evaluare psihologică pentru instanță (tutelă) la domiciliu | **800 lei** |
+  """
 
-      [params.education.items.school]
-        name = "Massachusetts Institute of Technology"
-        url = "https://example.org"
+      #[params.education.items.school]
+      #  name = "Massachusetts Institute of Technology"
+      #  url = "https://example.org"
 
-      [params.education.items.featuredLink]
-        enable = true
-        name = "My academic record"
-        url = "https://example.com"
-
-    [[params.education.items]]
-      title = "High School"
-      GPA = "4.2 out of 5.0"
-
-      [params.education.items.school]
-        name = "Thomas Jefferson High School for Science and Technology."
-        url = "https://example.org"
-
-      [params.education.items.featuredLink]
-        enable = true
-        url = "https://example.com"
+      #[params.education.items.featuredLink]
+      #  enable = true
+      #  name = "My academic record"
+      #  url = "https://example.com"
 
   # Achievements
   [params.achievements]
-    enable = true
+    enable = false
     # title = "Custom Name"
 
     [[params.achievements.items]]
@@ -335,7 +354,7 @@ Extracurricular Activities
 
   # projects
   [params.projects]
-    enable = true
+    enable = false
     # title = "Custom Name"
 
     [[params.projects.items]]
@@ -391,10 +410,10 @@ Extracurricular Activities
   #Contact
   [params.contact]
     enable = true
-    # title = "Custom Name"
-    content = "My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!"
-    btnName = "Mail me"
-    btnLink = "mailto:gurusabarisha@gmail.com"
+    title = "Contactează-ne"
+    content = "Ne poți contacta prin email sau telefon."
+    #btnName = "Mail me"
+    #btnLink = "mailto:gurusabarisha@gmail.com"
     # [params.contact.formspree]
     #   enable = true # `contact.email` value will be ignored
     #   formId = "abcdefgh" # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
@@ -410,12 +429,12 @@ Extracurricular Activities
       enable = true
       disableFeaturedImage = false
 
-    [params.footer.socialNetworks]
-      github = "https://github.com"
-      linkedin = "https://linkedin.com"
-      twitter = "https://twitter.com"
-      instagram = "https://instagram.com"
-      facebook = "https://facebook.com"
+    #[params.footer.socialNetworks]
+      #github = "https://github.com"
+      #linkedin = "https://linkedin.com"
+      #twitter = "https://twitter.com"
+      #instagram = "https://instagram.com"
+      #facebook = "https://facebook.com"
 
   # List pages like blogs and posts
   [params.listPages]

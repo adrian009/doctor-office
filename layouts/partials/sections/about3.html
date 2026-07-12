@@ -15,7 +15,9 @@
                 {{ $about3.content | markdownify }}
 
                 {{ if .Site.Params.about3.skills.enable }}
+                <br><br>
                 {{ $about3.skills.title | default .Site.Params.about3.skills.title }}
+                <br><br>
                 <ul>
                     {{ range .Site.Params.about3.skills.items }}
                     <li>{{ . | markdownify }}</li>
