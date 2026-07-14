@@ -7,7 +7,7 @@ theme = 'hugo-profile'
   title = "Avancris"
   description = "Avancris - Întelegem Mintea, Susținem Omul"
   # staticPath = ""  # The path to serve the static files from
-  favicon = "/doctor-office/fav.png"
+  favicon = "./fav.png"
 
   # Whether the fade animations on the home page will be enabled
   animate = true
@@ -45,7 +45,7 @@ theme = 'hugo-profile'
   # If you want to customize the menu, you can change it here
   [params.navbar]
     align = "ms-auto" # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
-    brandLogo = "/doctor-office/avancrisLogo.png" # Logo for the brand | default is the favicon variable
+    brandLogo = "./avancrisLogo.png" # Logo for the brand | default is the favicon variable
     showBrandLogo = true # Show brand logo in nav bar | default is true
     brandName = "Avancris" # Brand name for the brand | default is the title variable
     disableSearch = true
@@ -71,7 +71,7 @@ theme = 'hugo-profile'
     title = "AVANCRIS"
     subtitle = "Empatie - Echilibru - Evoluție"
     content = "La S.C. AVANCRIS S.R.L. oferim servicii medicale specializate dedicate evaluării pacienților, diagnosticării acestora și tratamentului tulburărilor psihice, într-un cadru sigur, discret și empatic."
-    image = "/doctor-office/logo.jpeg"
+    image = "./logo.jpeg"
 
     [params.hero.bottomImage]
       enable = true
@@ -89,7 +89,7 @@ theme = 'hugo-profile'
   [params.about]
     enable = true
     title = "Echipa noastră"
-    image = "/doctor-office/avancris-team.png"
+    image = "./avancris-team.png"
     content = """
 Echipa noastră, formată din medic, psiholog, asistent medical, oferă o abordare integrată a sănătății mintale, cu accent pe respect și echilibrarea psihică a pacientului.
 """
@@ -104,7 +104,7 @@ Echipa noastră, formată din medic, psiholog, asistent medical, oferă o aborda
   [params.about2]
     enable = true
     title = "Dr. Băncescu Răzvan-Alexandru - Parcurs de excepție"
-    image = "/doctor-office/hero.jpeg"
+    image = "./hero.jpeg"
     content = """
 La începutul anilor ‘90, în cadrul Colegiul Național I.C. Brătianu Pitești, continuat cu Universitatea de Medicină și Farmacie ”Tg. Mureș” și ulterior rezidențiatul efectuat într-un cadru totalmente profesionist la Spitalul Clinic de Urgență Militar Central ,,Carol Davila’’ –  Bucuresti, sub îndrumarea Conf. univ. dr. col. Vasiliu Octavian.
 
@@ -128,7 +128,7 @@ Continuă ulterior cu o experiență de peste 16 ani în Spitalul Județean de U
   [params.about3]
     enable = true
     title = "Psiholog - Lungan Cristina Elena"
-    image = "/doctor-office/logo.jpeg"
+    image = "./logo.jpeg"
     content = """
 Cu o experiență de peste 10 ani în domeniul psihologiei și psiho-pedagogiei, oferă suport specializat în evaluarea și consilierea pacienților, contribuind la menținerea și îmbunătățirea echilibrului emoțional.
 """
@@ -148,7 +148,7 @@ Cu o experiență de peste 10 ani în domeniul psihologiei și psiho-pedagogiei,
   [params.about4]
     enable = true
     title = "Asistent medical - Catrina Denisa Maria"
-    image = "/doctor-office/logo.jpeg"
+    image = "./logo.jpeg"
     content = """
 Cu  experiență în domeniul psihiatriei de ambulatoriu și al îngrijirii medico-psihiatrice, asigură suport medical și contribuie la monitorizarea și îngrijirea pacienților.
 """
