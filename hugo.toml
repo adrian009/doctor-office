@@ -1,4 +1,4 @@
-baseURL = 'http://localhost:1313/doctor-office/'
+baseURL = 'https://www.cabinet-dr-bancescu.ro/'
 languageCode = 'en-us'
 title = 'Avancris - Întelegem Mintea, Susținem Omul'
 theme = 'hugo-profile'
@@ -67,7 +67,7 @@ theme = 'hugo-profile'
   # Hero
   [params.hero]
     enable = true
-    intro = "Bine ati venit la"
+    intro = "Bine ați venit la"
     title = "AVANCRIS"
     subtitle = "Empatie - Echilibru - Evoluție"
     content = "La S.C. AVANCRIS S.R.L. oferim servicii medicale specializate dedicate evaluării pacienților, diagnosticării acestora și tratamentului tulburărilor psihice, într-un cadru sigur, discret și empatic."
@@ -305,7 +305,6 @@ I am currently working as a software developer at [example org.](https://example
 | Consiliere psihologică suportivă, în regim de urgență (30 min.) | **150 lei** |
 | Psihoterapii (50 - 60 min.) | **300 lei/ședință** |
 | Eliberare avize pentru psihologie clinică, psihologia muncii, psihologia transporturilor | **150 lei** |
-| Eliberare avize pentru psihologie aplicată în domeniul securității naționale, permis port-armă | **200 lei** |
 | Examinare psihologică (testări, consiliere psihologică, psihoterapie de scurtă durată) la domiciliu (programare prealabilă, max. 5 km. de Pitești) | **350 lei** |
 | Examinare psihologică (testări, consiliere psihologică, psihoterapie de scurtă durată) la domiciliu (programare prealabilă, max. 25 km. de Pitești) | **500 lei** |
 | Raport de evaluare psihologică pentru instanță (tutelă) | **600 lei** |
