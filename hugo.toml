@@ -7,14 +7,12 @@ theme = 'hugo-profile'
   title = "Avancris"
   description = "Avancris - Întelegem Mintea, Susținem Omul"
   # staticPath = ""  # The path to serve the static files from
-  favicon = "./fav.png"
-
+  # favicon = "/doctor-office/"
   # Whether the fade animations on the home page will be enabled
   animate = true
 
-  [params.theme]
-    # disableThemeToggle = true
-    # defaultTheme = "light" # dark
+[markup.goldmark.renderer]
+  unsafe = true
 
   [params.font]
     fontSize = "1rem" # default: 1rem
@@ -22,30 +20,10 @@ theme = 'hugo-profile'
     lineHeight = 1.5 # default: 1.5
     textAlign = "left" # default: left
 
-  # color preference
-  # When using hex codes for colors, quotations must be used along with the # sign
-  # [params.color]
-  #   textColor = "#343a40"
-  #   secondaryTextColor = "#6c757d"
-  #   textLinkColor = "#007bff"
-  #   backgroundColor = "#eaedf0"
-  #   secondaryBackgroundColor = "#64ffda1a"
-  #   primaryColor = "#007bff"
-  #   secondaryColor = "#f8f9fa"
-
-  #   [params.color.darkmode]
-  #     textColor = "#e4e6eb"
-  #     secondaryTextColor = "#b0b3b8"
-  #     textLinkColor = "#ffffff"
-  #     backgroundColor = "#18191a"
-  #     secondaryBackgroundColor = "#212529"
-  #     primaryColor = "#ffffff"
-  #     secondaryColor = "#212529"
-
   # If you want to customize the menu, you can change it here
   [params.navbar]
     align = "ms-auto" # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
-    brandLogo = "./avancrisLogo.png" # Logo for the brand | default is the favicon variable
+    brandLogo = "./fav.png" # Logo for the brand | default is the favicon variable
     showBrandLogo = true # Show brand logo in nav bar | default is true
     brandName = "Avancris" # Brand name for the brand | default is the title variable
     disableSearch = true
@@ -161,109 +139,6 @@ Cu  experiență de peste 12 ani în domeniul psihiatriei de ambulatoriu și al 
       ]
 
 
-  # Experience
-  [params.experience]
-    enable = false
-    # title = "Custom Name"
-
-    [[params.experience.items]]
-      company = "Facebook"
-      companyUrl = "https://example.com"
-
-      [[params.experience.items.jobs]]
-        name = "Senior Software Developer"
-        date = "Jan 2023 - present"
-        content = "I am currently working as a senior software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-
-        [params.experience.items.jobs.info]
-          content = "Working as a senior software developer"
-
-        [[params.experience.items.jobs.featuredItems.fontAwesomeIcons]]
-          icon = "fa-brands fa-react"
-          url = "https://react.dev/"
-          tooltip = "Example tooltip content"
-
-        [[params.experience.items.jobs.featuredItems.fontAwesomeIcons]]
-          icon = "fab fa-x-twitter"
-          url = "https://example.com"
-          # tooltip = "Example tooltip content"
-
-        [[params.experience.items.jobs.featuredItems.customIcons]]
-          icon = "/fav.png"
-          url = "https://example.com"
-          tooltip = "Example tooltip content"
-
-      [[params.experience.items.jobs]]
-        name = "Software Developer"
-        date = "Jan 2022 - Dec 2023"
-        content = "I worked as a software developer. I worked on a project that will be used to help people find the best way to get around the city."
-
-    [[params.experience.items]]
-      company = "Amazon"
-      companyUrl = "https://example.com"
-
-      [[params.experience.items.jobs]]
-        name = "Software Developer"
-        date = "Sep 2020 - Dec 2021"
-        content = """
-I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-- Lead backend developer for a product.
-- Created a frontend design for a product.
-"""
-
-        [params.experience.items.jobs.info]
-          content = "I worked as a software developer for more than one year in Amazon."
-
-    [[params.experience.items]]
-      company = "Apple"
-      companyUrl = "https://example.com"
-
-      [[params.experience.items.jobs]]
-        name = "Junior Software Developer"
-        date = "Jan 2020 - Aug 2020"
-        content = """
-I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-- Lead backend developer for a product.
-- Created a frontend design for a product.
-"""
-
-        [[params.experience.items.jobs.featuredItems.fontAwesomeIcons]]
-          icon = "fa-brands fa-react"
-          url = "https://react.dev/"
-
-        [[params.experience.items.jobs.featuredItems.fontAwesomeIcons]]
-          icon = "fab fa-x-twitter"
-          url = "https://example.com"
-
-        [[params.experience.items.jobs.featuredItems.customIcons]]
-          icon = "/fav.png"
-          url = "https://example.com"
-
-    [[params.experience.items]]
-      company = "Netflix"
-      companyUrl = "https://example.com"
-
-      [[params.experience.items.jobs]]
-        name = "UI/UX Designer"
-        date = "June 2017 - Nov 2019"
-        content = """
-I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-- Lead backend developer for a product.
-- Created a frontend design for a product.
-"""
-
-    [[params.experience.items]]
-      company = "Google"
-      companyUrl = "https://example.com"
-
-      [[params.experience.items.jobs]]
-        name = "Product Designer"
-        date = "Feb 2016 - Mar 2017"
-        content = "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-
   # Education
   [params.education]
     enable = true
@@ -272,9 +147,8 @@ I am currently working as a software developer at [example org.](https://example
 
     [[params.education.items]]
       title = "Listă prețuri psihiatrie"
-      #date = "2013 - 2015"
-      #GPA = "3.8 out of 5.0"
       content = """
+<style> table { width: 100%; } </style>
 
 | Serviciu | Preț |
 | :--- | ---: |
@@ -311,100 +185,7 @@ I am currently working as a software developer at [example org.](https://example
 | Raport de evaluare psihologică pentru instanță (tutelă) la domiciliu | **800 lei** |
   """
 
-      #[params.education.items.school]
-      #  name = "Massachusetts Institute of Technology"
-      #  url = "https://example.org"
-
-      #[params.education.items.featuredLink]
-      #  enable = true
-      #  name = "My academic record"
-      #  url = "https://example.com"
-
-  # Achievements
-  [params.achievements]
-    enable = false
-    # title = "Custom Name"
-
-    [[params.achievements.items]]
-      title = "Google kickstart runner"
-      content = "I solved all problems with optimal solution."
-      url = "https://example.com"
-      image = "/images/achievement.jpg"
-
-    [[params.achievements.items]]
-      title = "Facebook Hackathon Winner"
-      content = "Developed a product using Artificial Intelligence."
-      image = "/images/achievement.jpg"
-
-    [[params.achievements.items]]
-      title = "Hugo Profile"
-      content = "Developed a theme and getting 1K+ downloads per month."
-      url = "https://github.com/gurusabarish/hugo-profile"
-      image = "/images/achievement.jpg"
-
-    [[params.achievements.items]]
-      title = "Microsoft Imagine Runner"
-      content = "We are developed a product which can help others."
-
-    [[params.achievements.items]]
-      title = "Google Summer of Code"
-      content = "Contributed to a open source project."
-      url = "https://example.com"
-
-  # projects
-  [params.projects]
-    enable = false
-    # title = "Custom Name"
-
-    [[params.projects.items]]
-      title = "Hugo Profile"
-      content = "A highly customizable and mobile first Hugo template for personal portfolio and blog."
-      image = "/images/projects/profile.png"
-      badges = ["Hugo", "Bootstrap", "Javascript"]
-
-      [params.projects.items.featured]
-        name = "Demo"
-        link = "https://hugo-profile.netlify.app"
-
-      [[params.projects.items.links]]
-        icon = "fa fa-envelope"
-        url = "mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f"
-
-      [[params.projects.items.links]]
-        icon = "fab fa-github"
-        url = "https://github.com/gurusabarish/hugo-profile"
-
-      [[params.projects.items.links]]
-        icon = "fab fa-twitter"
-        url = "https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile"
-
-    [[params.projects.items]]
-      title = "Image Converter"
-      content = "A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django."
-      image = "/images/projects/converter.jpg"
-      badges = ["Django", "Bootstrap"]
-
-      [params.projects.items.featured]
-        name = "Demo"
-        link = "https://django-converter.herokuapp.com"
-
-      [[params.projects.items.links]]
-        icon = "fab fa-github"
-        url = "https://github.com/gurusabarish/converter"
-
-    [[params.projects.items]]
-      title = "Hugo Profile V2"
-      content = "A clean and simple Hugo template for personal portfolio and blog."
-      image = "/images/projects/profile2.jpg"
-      badges = ["Hugo", "Bootstrap", "Javascript"]
-
-      [params.projects.items.featured]
-        name = "Demo V2"
-        link = "https://hugo-profile-2.netlify.app"
-
-      [[params.projects.items.links]]
-        icon = "fab fa-github"
-        url = "https://github.com/gurusabarish/HugoProfileV2"
+  
 
   #Contact
   [params.contact]
@@ -416,29 +197,7 @@ I am currently working as a software developer at [example org.](https://example
         Telefon: 0730 388 176 
         Luni - Vineri: 09:00 - 15:00 
     """
-    #btnName = "Mail me"
-    #btnLink = "mailto:gurusabarisha@gmail.com"
-    # [params.contact.formspree]
-    #   enable = true # `contact.email` value will be ignored
-    #   formId = "abcdefgh" # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
-    #   emailCaption = "Enter your email address"
-    #   messageCaption = "Enter your message here"
-    #   messageRows = 5
 
-  [params.footer]
-    [params.footer.recentPosts]
-      path = "blogs"
-      count = 3
-      title = "Recent Posts"
-      enable = true
-      disableFeaturedImage = false
-
-    #[params.footer.socialNetworks]
-      #github = "https://github.com"
-      #linkedin = "https://linkedin.com"
-      #twitter = "https://twitter.com"
-      #instagram = "https://instagram.com"
-      #facebook = "https://facebook.com"
 
   # List pages like blogs and posts
   [params.listPages]
