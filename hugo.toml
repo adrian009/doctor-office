@@ -91,7 +91,7 @@ theme = 'hugo-profile'
     title = "Echipa noastră"
     image = "./avancris-team.png"
     content = """
-Echipa noastră, formată din medic, psiholog, asistent medical, oferă o abordare integrată a sănătății mintale, cu accent pe respect și echilibrarea psihică a pacientului.
+Echipa noastră, formată din medic, psiholog, asistent medical oferă o abordare integrată a sănătății mintale, cu accent pe respect și echilibrarea psihică a pacientului.
 """
     [params.about.skills]
       enable = false
@@ -147,10 +147,10 @@ Cu o experiență de peste 10 ani în domeniul psihologiei și psiho-pedagogiei,
   # Third About Section (Custom Added)
   [params.about4]
     enable = true
-    title = "Asistent medical - Catrina Denisa Maria"
+    title = "Asistent medical - Catrina Maria Denisa"
     image = "./logo.jpeg"
     content = """
-Cu  experiență în domeniul psihiatriei de ambulatoriu și al îngrijirii medico-psihiatrice, asigură suport medical și contribuie la monitorizarea și îngrijirea pacienților.
+Cu  experiență de peste 12 ani în domeniul psihiatriei de ambulatoriu și al îngrijirii medico-psihiatrice, asigură suport medical și contribuie la monitorizarea și îngrijirea pacienților.
 """
     [params.about4.skills]
       enable = false
@@ -410,7 +410,12 @@ I am currently working as a software developer at [example org.](https://example
   [params.contact]
     enable = true
     title = "Contactează-ne"
-    content = "Ne poți contacta prin email sau telefon."
+    content = """
+    Ne găsiți la adresa: Pitești, Cartier Eremia Grigorescu, Str. Trandafirilor, Bl. P2.
+    Pentru programări:
+        Telefon: 0730 388 176 
+        Luni - Vineri: 09:00 - 15:00 
+    """
     #btnName = "Mail me"
     #btnLink = "mailto:gurusabarisha@gmail.com"
     # [params.contact.formspree]
